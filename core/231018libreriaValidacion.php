@@ -523,7 +523,15 @@ class validacionFormularios {  //ELIMINA EL METODO VALIDATEDATE Y LO INCLUYE EN 
         return $mensajeError;
     }
     
-    //Función para validar una hora con formato "hh:mm"
+     /**
+     * Esta función comprueba si la hora esta con el siguiente formato hh:mm
+     * 
+     * @author Carlos Garcia Cachon.
+     * @version 1.0 Creada la función.
+     * @since 2023-11-20
+     * @param string $hora Cadena con la hora que se va a comprobar.
+     * @return null|string Devuelve null si es correcto o un mensaje de error en caso de que lo haya.
+     */
     public static function validarFormatoHora($hora, $obligatorio = 0) {
         //Expresión regular para el formato de hora hh:mm
         $patron = '/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/';
@@ -545,7 +553,15 @@ class validacionFormularios {  //ELIMINA EL METODO VALIDATEDATE Y LO INCLUYE EN 
         return $mensajeError;
     }
     
-    //Función para validar una hora con formato "hh:mm:ss"
+    /**
+     * Esta función comprueba si la hora esta con el siguiente formato hh:mm:ss
+     * 
+     * @author Carlos Garcia Cachon.
+     * @version 1.0 Creada la función.
+     * @since 2023-11-20
+     * @param string $hora Cadena con la hora que se va a comprobar.
+     * @return null|string Devuelve null si es correcto o un mensaje de error en caso de que lo haya.
+     */
     public static function validarFormatoHoraConSegundos($hora, $obligatorio = 0) {
         //Expresión regular para el formato de hora hh:mm:ss
         $patron = '/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/';
@@ -568,6 +584,16 @@ class validacionFormularios {  //ELIMINA EL METODO VALIDATEDATE Y LO INCLUYE EN 
    
     }
     
+    /**
+     * Esta función comprueba si el codigo hexadecimal introducido
+     * es un formato correcto de un color en codigo hexadecimal
+     * 
+     * @author Carlos Garcia Cachon.
+     * @version 1.0 Creada la función.
+     * @since 2023-11-20
+     * @param string $colorHex Cadena con el codigo que se va a comprobar.
+     * @return null|string Devuelve null si es correcto o un mensaje de error en caso de que lo haya.
+     */
     public static function validarColorHex($colorHex, $obligatorio = 0) {
         //Expresión regular para validar un color hexadecimal válido
         $patron = "/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/";
