@@ -69,17 +69,15 @@
                     
                     //Inicializo las variables
                     $entradaOK = true;
-                    $aRespuestas = ['nombre'=> "",'fechaNac'=> "",'hora'=> "",'fechActual'=> ""];
-                    $aErrores = ['nombre'=> "",'fechaNac'=> "",'hora'=> ""];
+                    $aRespuestas = ['nombre'=> '','fechaNac'=> '','hora'=> '','fechActual'=> ''];
+                    $aErrores = ['nombre'=> '','fechaNac'=> '','hora'=> ''];
                     $_REQUEST['fechActual'] = date('d-m-Y');
                     //En el siguiente if pregunto si el '$_REQUEST' recupero el valor 'enviar' que enviamos al pulsar el boton de enviar del formulario.
                     if (isset($_REQUEST['enviar'])) {
                         //Inicializo el array con los mensajes de error. (Los metodos que uso en caso de no validar devuelven un mensaje de error.)
-                        $aErrores = [
-                            'nombre' => validacionFormularios::comprobarAlfabetico($_REQUEST['nombre'],TAM_MAX_ALFABETICO,TAM_MIN_ALFABETICO,OBLIGATORIO),
-                            'fechaNac' => validacionFormularios::validarFecha($_REQUEST['fechaNac'],TAM_MAX_FECHA,TAM_MIN_FECHA,OBLIGATORIO),
-                            'hora' => validacionFormularios::validarFormatoHora($_REQUEST['hora'],OPCIONAL)
-                        ];
+                        $aErrores = ['nombre' => validacionFormularios::comprobarAlfabetico($_REQUEST['nombre'],TAM_MAX_ALFABETICO,TAM_MIN_ALFABETICO,OBLIGATORIO)];
+                        $aErrores = ['fechaNac' => validacionFormularios::validarFecha($_REQUEST['fechaNac'],TAM_MAX_FECHA,TAM_MIN_FECHA,OBLIGATORIO)];
+                        $aErrores = ['hora' => validacionFormularios::validarFormatoHora($_REQUEST['hora'],OPCIONAL)];
                         //En este foreach recoremos el array buscando que exista NULL (Los metodos anteriores si son correctos devuelven NULL)
                         //Y en caso negativo cambiara el valor de '$entradaOK' a false y borrara el contenido del campo
                         foreach ($aErrores as $campo => $error) {

@@ -101,105 +101,105 @@
                     $entradaOK = true;
                     
                     $aRespuestas = [
-                        'alfabeticoObligatorio' => "",
-                        'alfabeticoOpcional' => "",
+                        'alfabeticoObligatorio' => '',
+                        'alfabeticoOpcional' => '',
             
-                        'alfanumericoObligatorio' => "",
-                        'alfanumericoOpcional' => "",
+                        'alfanumericoObligatorio' => '',
+                        'alfanumericoOpcional' => '',
             
-                        'enteroObligatorio' => "",
-                        'enteroOpcional' => "",
+                        'enteroObligatorio' => '',
+                        'enteroOpcional' => '',
             
-                        'floatObligatorio' => "",
-                        'floatOpcional' => "",
+                        'floatObligatorio' => '',
+                        'floatOpcional' => '',
                         
-                        'correoObligatorio' => "",
-                        'correoOpcional' => "",
+                        'correoObligatorio' => '',
+                        'correoOpcional' => '',
                         
-                        'urlObligatorio' => "",
-                        'urlOpcional' => "",
+                        'urlObligatorio' => '',
+                        'urlOpcional' => '',
             
-                        'fechaObligatorio' => "",
-                        'fechaOpcional' => "",
+                        'fechaObligatorio' => '',
+                        'fechaOpcional' => '',
                         
-                        'dniObligatorio' => "",
-                        'dniOpcional' => "",
+                        'dniObligatorio' => '',
+                        'dniOpcional' => '',
                         
-                        'cpObligatorio' => "",
-                        'cpOpcional' => "",
+                        'cpObligatorio' => '',
+                        'cpOpcional' => '',
             
-                        'passwordObligatorio' => "",
-                        'passwordOpcional' => "",
+                        'passwordObligatorio' => '',
+                        'passwordOpcional' => '',
                         
-                        'telefonoObligatorio' => "",
-                        'telefonoOpcional' => "",
+                        'telefonoObligatorio' => '',
+                        'telefonoOpcional' => '',
                         
-                        'fileObligatorio' => "",
-                        'fileOpcional' => "",
+                        'fileObligatorio' => '',
+                        'fileOpcional' => '',
 
-                        'colorOpcional' => "",
+                        'colorOpcional' => '',
 
-                        'rangeOpcional' => "",
+                        'rangeOpcional' => '',
                         
-                        'listaObligatorio' => "",
+                        'listaObligatorio' => '',
                         
-                        'radioButtonObligatorio' => "",
+                        'radioButtonObligatorio' => '',
             
-                        'checkBoxObligatorio' => "",
+                        'checkBoxObligatorio' => '',
                         
-                        'textAreaObligatorio' => "",
-                        'textAreaOpcional' => ""
+                        'textAreaObligatorio' => '',
+                        'textAreaOpcional' => ''
                     ];
                     
                     $aErrores = [
-                        'alfabeticoObligatorio' => "",
-                        'alfabeticoOpcional' => "",
+                        'alfabeticoObligatorio' => '',
+                        'alfabeticoOpcional' => '',
             
-                        'alfanumericoObligatorio' => "",
-                        'alfanumericoOpcional' => "",
+                        'alfanumericoObligatorio' => '',
+                        'alfanumericoOpcional' => '',
             
-                        'enteroObligatorio' => "",
-                        'enteroOpcional' => "",
+                        'enteroObligatorio' => '',
+                        'enteroOpcional' => '',
             
-                        'floatObligatorio' => "",
-                        'floatOpcional' => "",
+                        'floatObligatorio' => '',
+                        'floatOpcional' => '',
                         
-                        'correoObligatorio' => "",
-                        'correoOpcional' => "",
+                        'correoObligatorio' => '',
+                        'correoOpcional' => '',
                         
-                        'urlObligatorio' => "",
-                        'urlOpcional' => "",
+                        'urlObligatorio' => '',
+                        'urlOpcional' => '',
             
-                        'fechaObligatorio' => "",
-                        'fechaOpcional' => "",
+                        'fechaObligatorio' => '',
+                        'fechaOpcional' => '',
                         
-                        'dniObligatorio' => "",
-                        'dniOpcional' => "",
+                        'dniObligatorio' => '',
+                        'dniOpcional' => '',
                         
-                        'cpObligatorio' => "",
-                        'cpOpcional' => "",
+                        'cpObligatorio' => '',
+                        'cpOpcional' => '',
             
-                        'passwordObligatorio' => "",
-                        'passwordOpcional' => "",
-                                                
-                        'telefonoObligatorio' => "",
-                        'telefonoOpcional' => "",
-            
-                        'fileObligatorio' => "",
-                        'fileOpcional' => "",
+                        'passwordObligatorio' => '',
+                        'passwordOpcional' => '',
+                        
+                        'telefonoObligatorio' => '',
+                        'telefonoOpcional' => '',
+                        
+                        'fileObligatorio' => '',
+                        'fileOpcional' => '',
 
-                        'colorOpcional' => "",
+                        'colorOpcional' => '',
 
-                        'rangeOpcional' => "",
+                        'rangeOpcional' => '',
                         
-                        'listaObligatorio' => "",
+                        'listaObligatorio' => '',
                         
-                        'radioButtonObligatorio' => "",
+                        'radioButtonObligatorio' => '',
             
-                        'checkBoxObligatorio' => "",
+                        'checkBoxObligatorio' => '',
                         
-                        'textAreaObligatorio' => "",
-                        'textAreaOpcional' => ""
+                        'textAreaObligatorio' => '',
+                        'textAreaOpcional' => ''
                     ];
                     //En el siguiente if pregunto si el '$_REQUEST' recupero el valor 'enviar' que enviamos al pulsar el boton de enviar del formulario.
                     if (isset($_REQUEST['enviar'])) {
@@ -208,54 +208,52 @@
                          * comprueba el valor recibido (en este caso el que recibe la variable '$_REQUEST') y devuelve 'null' si el valor es correcto,
                          * o un mensaje de error personalizado por cada función dependiendo de lo que validemos.
                          */ 
-                        $aErrores = [
-                            'alfabeticoObligatorio' => validacionFormularios::comprobarAlfabetico($_REQUEST['alfabeticoObligatorio'], TAM_MAX_ALFABETICO, TAM_MIN_ALFABETICO, OBLIGATORIO),
-                            'alfabeticoOpcional' => validacionFormularios::comprobarAlfabetico($_REQUEST['alfabeticoObligatorio'], TAM_MAX_ALFABETICO, TAM_MIN_ALFABETICO, OPCIONAL),
+                        $aErrores = ['alfabeticoObligatorio' => validacionFormularios::comprobarAlfabetico($_REQUEST['alfabeticoObligatorio'], TAM_MAX_ALFABETICO, TAM_MIN_ALFABETICO, OBLIGATORIO)];
+                        $aErrores = ['alfabeticoOpcional' => validacionFormularios::comprobarAlfabetico($_REQUEST['alfabeticoObligatorio'], TAM_MAX_ALFABETICO, TAM_MIN_ALFABETICO, OPCIONAL)];
 
-                            'alfanumericoObligatorio' => validacionFormularios::comprobarAlfanumerico($_REQUEST['alfanumericoObligatorio'], TAM_MAX_ALFANUMERICO, TAM_MIN_ALFANUMERICO, OBLIGATORIO),
-                            'alfanumericoOpcional' => validacionFormularios::comprobarAlfanumerico($_REQUEST['alfanumericoOpcional'], TAM_MAX_ALFANUMERICO, TAM_MIN_ALFANUMERICO, OPCIONAL),
+                        $aErrores = ['alfanumericoObligatorio' => validacionFormularios::comprobarAlfanumerico($_REQUEST['alfanumericoObligatorio'], TAM_MAX_ALFANUMERICO, TAM_MIN_ALFANUMERICO, OBLIGATORIO)];
+                        $aErrores = ['alfanumericoOpcional' => validacionFormularios::comprobarAlfanumerico($_REQUEST['alfanumericoOpcional'], TAM_MAX_ALFANUMERICO, TAM_MIN_ALFANUMERICO, OPCIONAL)];
 
-                            'enteroObligatorio' => validacionFormularios::comprobarEntero($_REQUEST['enteroObligatorio'], TAM_MAX_ENTERO, TAM_MIN_ENTERO, OBLIGATORIO),
-                            'enteroOpcional' => validacionFormularios::comprobarEntero($_REQUEST['enteroOpcional'], TAM_MAX_ENTERO, PHP_INT_MIN, OPCIONAL),
+                        $aErrores = ['enteroObligatorio' => validacionFormularios::comprobarEntero($_REQUEST['enteroObligatorio'], TAM_MAX_ENTERO, TAM_MIN_ENTERO, OBLIGATORIO)];
+                        $aErrores = ['enteroOpcional' => validacionFormularios::comprobarEntero($_REQUEST['enteroOpcional'], TAM_MAX_ENTERO, PHP_INT_MIN, OPCIONAL)];
 
-                            'floatObligatorio' => validacionFormularios::comprobarFloat($_REQUEST['floatObligatorio'], TAM_MAX_FLOAT, TAM_MIN_FLOAT, OBLIGATORIO),
-                            'floatOpcional' => validacionFormularios::comprobarFloat($_REQUEST['floatOpcional'], TAM_MAX_FLOAT, TAM_MIN_FLOAT, OPCIONAL),
+                        $aErrores = ['floatObligatorio' => validacionFormularios::comprobarFloat($_REQUEST['floatObligatorio'], TAM_MAX_FLOAT, TAM_MIN_FLOAT, OBLIGATORIO)];
+                        $aErrores = ['floatOpcional' => validacionFormularios::comprobarFloat($_REQUEST['floatOpcional'], TAM_MAX_FLOAT, TAM_MIN_FLOAT, OPCIONAL)];
 
-                            'correoObligatorio' => validacionFormularios::validarEmail($_REQUEST['correoObligatorio'], OBLIGATORIO),
-                            'correoOpcional' => validacionFormularios::validarEmail($_REQUEST['correoOpcional'], OPCIONAL),
+                        $aErrores = ['correoObligatorio' => validacionFormularios::validarEmail($_REQUEST['correoObligatorio'], OBLIGATORIO)];
+                        $aErrores = ['correoOpcional' => validacionFormularios::validarEmail($_REQUEST['correoOpcional'], OPCIONAL)];
 
-                            'urlObligatorio' => validacionFormularios::validarURL($_REQUEST['urlObligatorio'], OBLIGATORIO),
-                            'urlOpcional' => validacionFormularios::validarURL($_REQUEST['urlObligatorio'], OPCIONAL),
+                        $aErrores = ['urlObligatorio' => validacionFormularios::validarURL($_REQUEST['urlObligatorio'], OBLIGATORIO)];
+                        $aErrores = ['urlOpcional' => validacionFormularios::validarURL($_REQUEST['urlObligatorio'], OPCIONAL)];
 
-                            'fechaObligatorio' => validacionFormularios::validarFecha($_REQUEST['fechaObligatorio'],FECHA_MAX, FECHA_MIN, OBLIGATORIO),
-                            'fechaOpcional' => validacionFormularios::validarFecha($_REQUEST['fechaOpcional'],FECHA_MAX, FECHA_MIN, OPCIONAL),
+                        $aErrores = ['fechaObligatorio' => validacionFormularios::validarFecha($_REQUEST['fechaObligatorio'],FECHA_MAX, FECHA_MIN, OBLIGATORIO)];
+                        $aErrores = ['fechaOpcional' => validacionFormularios::validarFecha($_REQUEST['fechaOpcional'],FECHA_MAX, FECHA_MIN, OPCIONAL)];
 
-                            'dniObligatorio' => validacionFormularios::validarDni($_REQUEST['dniObligatorio'], OBLIGATORIO),
-                            'dniOpcional' => validacionFormularios::validarDni($_REQUEST['dniOpcional'], OPCIONAL),
+                        $aErrores = ['dniObligatorio' => validacionFormularios::validarDni($_REQUEST['dniObligatorio'], OBLIGATORIO)];
+                        $aErrores = ['dniOpcional' => validacionFormularios::validarDni($_REQUEST['dniOpcional'], OPCIONAL)];
 
-                            'cpObligatorio' => validacionFormularios::validarCp($_REQUEST['cpObligatorio'], OBLIGATORIO),
-                            'cpOpcional' => validacionFormularios::validarCp($_REQUEST['cpOpcional'], OPCIONAL),
+                        $aErrores = ['cpObligatorio' => validacionFormularios::validarCp($_REQUEST['cpObligatorio'], OBLIGATORIO)];
+                        $aErrores = ['cpOpcional' => validacionFormularios::validarCp($_REQUEST['cpOpcional'], OPCIONAL)];
 
-                            'passwordObligatorio' => validacionFormularios::validarPassword($_REQUEST['passwordObligatorio'],LONG_MAX,LONG_MIN, LOW, OBLIGATORIO),
-                            'passwordOpcional' => validacionFormularios::validarPassword($_REQUEST['passwordOpcional'],LONG_MAX,LONG_MIN, LOW, OPCIONAL),
+                        $aErrores = ['passwordObligatorio' => validacionFormularios::validarPassword($_REQUEST['passwordObligatorio'],LONG_MAX,LONG_MIN, LOW, OBLIGATORIO)];
+                        $aErrores = ['passwordOpcional' => validacionFormularios::validarPassword($_REQUEST['passwordOpcional'],LONG_MAX,LONG_MIN, LOW, OPCIONAL)];
 
-                            'telefonoObligatorio' => validacionFormularios::validarTelefono($_REQUEST['telefonoObligatorio'], OBLIGATORIO),
-                            'telefonoOpcional' => validacionFormularios::validarTelefono($_REQUEST['telefonoOpcional'], OPCIONAL),
+                        $aErrores = ['telefonoObligatorio' => validacionFormularios::validarTelefono($_REQUEST['telefonoObligatorio'], OBLIGATORIO)];
+                        $aErrores = ['telefonoOpcional' => validacionFormularios::validarTelefono($_REQUEST['telefonoOpcional'], OPCIONAL)];
 
-                            'fileObligatorio' => validacionFormularios::validarNombreArchivo($_REQUEST['fileObligatorio'], $aExtensiones, TAM_MAX_CARACTERES, TAM_MIN_CARACTERES, OBLIGATORIO),
-                            'fileOpcional' => validacionFormularios::validarNombreArchivo($_REQUEST['fileOpcional'], $aExtensiones, TAM_MAX_CARACTERES, TAM_MIN_CARACTERES, OPCIONAL),
+                        $aErrores = ['fileObligatorio' => validacionFormularios::validarNombreArchivo($_REQUEST['fileObligatorio'], $aExtensiones, TAM_MAX_CARACTERES, TAM_MIN_CARACTERES, OBLIGATORIO)];
+                        $aErrores = ['fileOpcional' => validacionFormularios::validarNombreArchivo($_REQUEST['fileOpcional'], $aExtensiones, TAM_MAX_CARACTERES, TAM_MIN_CARACTERES, OPCIONAL)];
 
-                            'colorOpcional' => validacionFormularios::validarColorHex($_REQUEST['colorOpcional'], OPCIONAL),
+                        $aErrores = ['colorOpcional' => validacionFormularios::validarColorHex($_REQUEST['colorOpcional'], OPCIONAL)];
 
-                            'rangeOpcional' => validacionFormularios::comprobarEntero($_REQUEST['rangeOpcional'], TAM_MAX_ENTERO, TAM_MIN_ENTERO, OPCIONAL),
+                        $aErrores = ['rangeOpcional' => validacionFormularios::comprobarEntero($_REQUEST['rangeOpcional'], TAM_MAX_ENTERO, TAM_MIN_ENTERO, OPCIONAL)];
                             
-                            'radioButtonObligatorio' => NULL,
+                        $aErrores = ['radioButtonObligatorio' => NULL];
                             
-                            'listaObligatorio' => validacionFormularios::validarElementoEnLista($_REQUEST['listaObligatorio'], $aLista),
+                        $aErrores = ['listaObligatorio' => validacionFormularios::validarElementoEnLista($_REQUEST['listaObligatorio'], $aLista)];
                         
-                            'textAreaObligatorio' => validacionFormularios::comprobarAlfanumerico($_REQUEST['textAreaObligatorio'], TAM_MAX_TEXTO, TAM_MIN_TEXTO, OBLIGATORIO),
-                            'textAreaOpcional' => validacionFormularios::comprobarAlfanumerico($_REQUEST['textAreaOpcional'], TAM_MAX_TEXTO, TAM_MIN_TEXTO, OPCIONAL)
-                        ];
+                        $aErrores = ['textAreaObligatorio' => validacionFormularios::comprobarAlfanumerico($_REQUEST['textAreaObligatorio'], TAM_MAX_TEXTO, TAM_MIN_TEXTO, OBLIGATORIO)];
+                        $aErrores = ['textAreaOpcional' => validacionFormularios::comprobarAlfanumerico($_REQUEST['textAreaOpcional'], TAM_MAX_TEXTO, TAM_MIN_TEXTO, OPCIONAL)];
                         
                         /* 
                          * En los siguientes 'if' comprobamos que existe valor dentro de las siguientes variables y en caso negativo mostramos un mensaje error.
